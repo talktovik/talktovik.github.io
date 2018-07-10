@@ -1,0 +1,32 @@
+#heading{
+	text-align: center;
+	font-size: 55px;
+	font-family: 'ABeeZee', sans-serif;
+}
+
+.data{
+	/*margin-right: 90px;*/
+}
+.first{
+	text-align: center;
+}
+ ul{
+	 list-style-type: none;
+	 font-family: 'Dosis', sans-serif;
+}
+#part1, #part2 , #part3 {
+	font-size: 20px;
+}
+
+.second ,.third{
+	text-align: center;
+	margin-top: 50px;
+}
+
+#minor {
+	font-size: 40px;
+	font-family: 'Patrick Hand', cursive;
+	text-decoration: underline;
+	color: #2F4F4F;
+
+}

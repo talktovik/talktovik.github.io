@@ -1,0 +1,49 @@
+a {
+	text-decoration: none;
+}
+
+body{
+	border: 15px solid #808080;
+	margin-bottom: 20px;
+	padding-bottom: 170px;
+}
+
+#contact{
+	font-family: 'Monofett', cursive;
+	font-size: 80px;
+	text-align: center;
+	color: #778899;
+	margin-top: 30px;
+	margin-bottom: 40px;
+
+}
+#first,#second{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 25px;
+}
+
+#github{
+	font-size: 50px;
+	text-align: center;
+}
+
+#connect li{
+	display:inline;padding-right:100pt;
+}
+#connect{
+	text-align: center;
+	font-size: 50px;
+	margin-top: 60px;
+	margin-bottom: 90px;
+	margin-left: 40px;
+}
+.data{
+	/*background-color: red;
+	border: 1px solid brown ;*/
+	font-size: 45px;
+	margin-top: 60px;
+	margin-bottom: 90px;
+	font-family: 'Dancing Script', cursive;
+
+}
+

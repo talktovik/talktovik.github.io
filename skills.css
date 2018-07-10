@@ -1,0 +1,99 @@
+.heading {
+	text-align: center;
+	font-family: 'Zilla Slab', serif;
+	font-size: 50px;
+}
+#span , #span1{
+	font-family: 'Caveat Brush', cursive;
+}
+
+#ifelse {
+	font-size: 35px;
+	margin-right: 200px;
+}
+
+.else {
+	margin-right: 550px;
+	font-size: 35px;
+}
+.factor{
+	margin-bottom: 80px;
+}
+
+.para {
+	font-size: 20px;
+	margin-left:30px;
+	line-height: 2;
+	font-family: 'Zilla Slab', serif;
+
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+blockquote:before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+
+blockquote:after {
+    font-family: Georgia, serif;
+    position: absolute;
+   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+    }
+
+/*.data {
+	border: 10px solid black;
+}*/
+
+.bar {
+	margin-bottom: 100px;
+}
+
+#span1 {
+	font-size: 30px;
+	text-decoration: underline;
+}
+
+.data {
+	font-size: 20px;
+	font-family: 'Zilla Slab', serif;
+}
+
+.row {
+	margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
