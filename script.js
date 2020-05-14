@@ -1,1 +1,1 @@
-alert("Hello there, this site is under construction so, please don't judge me !");
+alert("Hello there, this site is under construction so, please don't judge me ! Soon I'll FIX THINGS");
