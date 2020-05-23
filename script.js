@@ -1,1 +1,1 @@
-alert("Hello there, this site is under construction so, please don't judge me ! Soon I'll FIX THINGS");
+alert("The Site is not working: from date 24/may/2020 to 27/may/2020");

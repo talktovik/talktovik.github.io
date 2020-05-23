@@ -1,40 +1,440 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122171482-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <title></title>
+  <style >
+    .welcome-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  z-index: 1;
+  //   optionally
+  animation: moveTop 2s 11s forwards;
+}
 
-  gtag('config', 'UA-122171482-1');
-</script>
+.content {
+  user-select: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 5vw;
+  font-family: 'verdana';
+  font-weight: bold;
+  letter-spacing: 20px;
+  opacity: 0;
+  animation: opacity 2s 2s forwards 1 ease-in-out;
+  position: relative;
+  p {
+    position: relative;
+    width: 80%;
+    text-align: center;
+    opacity: 1;
+    text-shadow: 10px 0px 2px rgba(#fff, 0.5);
+    animation: textShadow 3s 4s alternate infinite;
+    &:before {
+      content: attr(data-shadow);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0) scale(2);
+      filter: blur(4px);
+      opacity: 0;
+      animation: rightToLeft 3s 3s forwards 1 ease-in-out;
+    }
+  }
+  span {
+    //HIGHLIGHTS
+    animation: backToPosition 2s 2s forwards 1 ease-in-out;
+    // box-shadow: 0 20px 10px -10px transparent;
+    position: relative;
+    //     strange but i like it ;o 
+    color: transparent;
+    &:hover {
+      // color:red;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: 5%;
+      width: 90%;
+      height: 5px;
+      background: white;
+      opacity: 0;
+      filter: blur(5px);
+      animation: opacity 1s 5s alternate infinite;
+    }
+    &:nth-of-type(1) {
+      top: -70px;
+      left: -40px;
+    }
+    &:nth-of-type(2) {
+      top: 20px;
+      left: -50px;
+      &:before {
+        animation: opacity 1s 5.25s alternate infinite;
+      }
+    }
+    &:nth-of-type(3) {
+      top: -50px;
+      left: 0px;
+      &:before {
+        animation: opacity 1s 5.5s alternate infinite;
+      }
+    }
+    &:nth-of-type(4) {
+      top: -90px;
+      left: -40px;
+      &:before {
+        animation: opacity 1s 5.75s alternate infinite;
+      }
+    }
+    &:nth-of-type(5) {
+      top: 100px;
+      left: -10px;
+      &:before {
+        animation: opacity 1s 6s alternate infinite;
+      }
+    }
+    &:nth-of-type(6) {
+      top: -60px;
+      left: 20px;
+      &:before {
+        animation: opacity 1s 6.25s alternate infinite;
+      }
+    }
+    &:nth-of-type(7) {
+      top: -80px;
+      left: 70px;
+      &:before {
+        animation: opacity 1s 6.5s alternate infinite;
+      }
+    }
+  }
+}
 
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Poor+Story|Anonymous+Pro|Cutive+Mono|Cabin+Sketch" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="shortcut icon" href="favicon.png">
-	<title>Home| Vikas Yadav</title>
-	<script src="script.js" "></script>
+.corner {
+  width: 50px;
+  height: 50px;
+  animation: scale 2s alternate infinite ease-in;
+  filter: blur(2px);
+  position: absolute;
+  opacity: .1;
+  &:nth-of-type(1) {
+    top: 2rem;
+    left: 2rem;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+  &:nth-of-type(2) {
+    top: 2rem;
+    right: 2rem;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    animation-delay: 0.5s;
+  }
+  &:nth-of-type(3) {
+    bottom: 2rem;
+    left: 2rem;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    animation-delay: 1s;
+  }
+  &:nth-of-type(4) {
+    bottom: 2rem;
+    right: 2rem;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    animation-delay: 1.5s;
+  }
+}
+
+.continue {
+  filter: blur(1px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 15px white inset;
+  // z-index:4;
+  cursor: pointer;
+  background: linear-gradient(90deg, transparent 33%, white 34%, transparent 35%, transparent 65%, white 66%, transparent 67%);
+  background-size: 300%;
+  background-position: left;
+  transition: all .5s;
+  animation: opacity 2s 7s forwards 1;
+  opacity: 0;
+  &:hover {
+    background-position: right;
+    color: green;
+    filter: blur(0);
+  }
+}
+
+.right-vert-line {
+  position: absolute;
+  background: linear-gradient(transparent, green);
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  right: -5%;
+  width: 2px;
+  animation: moveToLeft 2s 1s forwards ease-in-out;
+  filter: blur(1px);
+}
+
+.left-vert-line {
+  position: absolute;
+  background: linear-gradient(green, transparent);
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  right: 105%;
+  width: 2px;
+  animation: moveToRight 2s 1s forwards ease-in-out;
+  filter: blur(1px);
+}
+
+/////////////////////////////////////////////////////////
+////////////////// KEYFRAMES SECTION////////////////////
+///////////////////////////////////////////////////////
+@keyframes moveToLeft {
+  from {
+    right: 0%;
+  }
+  50% {
+    opacity: .3;
+  }
+  to {
+    right: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveToRight {
+  from {
+    right: 100%;
+  }
+  50% {
+    opacity: .3;
+  }
+  to {
+    right: 0%;
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backToPosition {
+  to {
+    left: 0;
+    top: 0;
+    // box-shadow:0 20px 10px -10px white;
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-35%, 0) scale(2)
+  }
+  10% {
+    opacity: .01;
+  }
+  50% {
+    opacity: .5;
+  }
+  90% {
+    opacity: .01;
+  }
+  100% {
+    transform: translate(-65%, 0) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes moveTop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    top: -100%;
+    bottom: 100%;
+    opacity:0;
+  }
+}
+
+// if color of text is 'transparent' the opacity of text is controled by blur property of text-shadow
+@keyframes textShadow {
+  from {
+    text-shadow: 10px 0px 2px rgba(#fff, 0.5);
+    filter: blur(0px);
+  }
+  to {
+    text-shadow: 5px 0px 2px rgba(#fff, 0.5);
+    filter: blur(1px);
+  }
+}
+
+///////////////////////////////////////////////////
+/////////////////STYLES FOR ICONS/////////////////
+//////////////////////////////////////////////////
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //optionally
+  // border: 5px solid black;
+  width: 150px;
+  height: 150px;
+  transform: rotateX(45deg) rotate(45deg);
+  border-radius: 10px;
+  overflow: hidden;
+  opacity:0;
+  animation:opacity 1s 12s 1 forwards;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  transform: rotate(-45deg);
+  min-width: 220px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 210px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+  user-select:none;
+}
+
+.fb {
+  justify-content: flex-end;
+  transition: color .4s;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    background: #405CA1;
+    transition: left .4s;
+    z-index: -1;
+    border-right: 1px solid rgba(black, 0.4);
+  }
+  &:hover {
+    color: white;
+    &:before {
+      left: 0;
+    }
+  }
+}
+
+.git {
+  justify-content: flex-start;
+  transition: color .4s;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #24292E;
+    transition: right .4s;
+    z-index: -1;
+  }
+  &:hover {
+    color: white;
+    &:before {
+      right: 0;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////
+////////////////////OBVIOUS STUFF/////////////////////
+//////////////////////////////////////////////////////
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  // background: pink;
+  font-family: 'Verdana';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  </style>
 </head>
 <body>
-	<div id="bar"></div>
-     
-	<h1 class="container heading">Vikas Yadav </h1>
-	<hr class="style-two">
-	<div class="bio">
-		<p id="line1">Hi, I'm Vikas. I'm a <u>computer engineer</u>.</p>
-		<p id="line2"><b><u>Computers Networks</u> facinates me. And now I'm,</b> </p>
-		<p id="line3"><b>Exploring securities of virtual world.</b></p>
-		<p id="line4">("I believe that the best code is the code which you write only once.")</p>
-		<p id="resume">you can fine my resume here <a href="https://drive.google.com/open?id=1wiKnH4pkrsFJvcqwRRSR4mkTVP16-2rZ"><i class="fas fa-file"></i></a></p>
-		<p id="enter">Click Below to Enter </p>	
-		<a href="Firstpage.html" class="btn btn-info btn-lg btn-default" id="factor" role="button"><i class="fas fa-angle-double-down"></i></a>
-		<div id="quotebar"></div>
-    </div>
-    
-       
-       
+
+  <div class="welcome-page">
+  <div class="corner"></div>
+  <div class="corner"></div>
+  <div class="corner"></div>
+  <div class="corner"></div>
+  <div class="content">
+    <p data-shadow="WELCOME"><span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span></p>
+  </div>
+  <div class="right-vert-line"></div>
+  <div class="left-vert-line"></div>
+  <div class="continue">Sneaky Button</div>
+</div>
+<div class="container">
+  <div class="icons">
+    <div class="icon fb"><a href="#2" target="_blank">FB</a></div>
+    <div class="icon git"><a href="#2" target="_blank">GIT</a></div>
+  </div>
+</div>
+
 </body>
 </html>
