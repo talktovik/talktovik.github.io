@@ -61,7 +61,7 @@ hr.style-two {
 }
 
 body{
-	border: 15px solid #808080;
+	/*border: 15px solid #808080;*/
 	margin-bottom: 20px;
 	padding-bottom: 170px;
 }
@@ -75,8 +75,49 @@ body{
   }
 
 
+#particles-js{
+    /*background-image: url(me.jpg);*/
+    background-size: cover;
+    height: 900px
+
+}
+
+header {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header  {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
+ header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+
+
+
+}
 
 
 
