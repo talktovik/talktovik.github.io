@@ -65,6 +65,14 @@ body{
 	margin-bottom: 20px;
 	padding-bottom: 170px;
 }
+.thecontainer p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+
+  }
 
 
 
