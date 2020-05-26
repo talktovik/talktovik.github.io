@@ -1,0 +1,70 @@
+#heading{
+  text-align: center;
+  font-size: 55px;
+font-family: 'Kaushan Script', cursive;
+
+}
+
+#minorheading{
+  font-size: 20px;
+  text-align: center;
+}
+.subheading{
+
+  font-size: 25px;
+  text-align: center;
+}
+
+.stack{
+  font-size: 30px;
+  text-align: center;
+font-family: 'Roboto Mono', monospace;
+color: #172ab5;
+
+}
+
+#part1{
+  font-size: 23px;
+    text-align: center;
+    text-decoration: none;
+
+}
+ ul{
+   list-style-type: none;
+   font-family: 'Dosis', sans-serif;
+   }
+
+
+#role{
+  font-size: 25px
+  
+}
+.thecontainer p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
