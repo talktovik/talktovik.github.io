@@ -1,4 +1,3 @@
-alert("The Site is not working: from date 24/may/2020 to 27/may/2020");
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
